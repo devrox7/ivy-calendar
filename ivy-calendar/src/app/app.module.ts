@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from 'src/layout/main-nav/main-nav.component';
 import { MaterialModule } from 'src/modules/material/material.module';
-import { HomeModule } from 'src/modules/home/home.module';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MainDashComponent } from 'src/layout/main-dash/main-dash.component';
+import { AuthenticationModule } from 'src/modules/authentication/authentication.module';
+import { DashboardModule } from 'src/modules/dashboard/dashboard.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { MainDashComponent } from 'src/layout/main-dash/main-dash.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HomeModule
+    AuthenticationModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
