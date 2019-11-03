@@ -42,6 +42,7 @@ import { MatTreeModule } from '@angular/material/tree';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -90,7 +91,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   exports:[
     CommonModule,
@@ -135,7 +139,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialModule { }

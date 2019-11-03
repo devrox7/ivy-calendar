@@ -1,1 +1,61 @@
-<p>register works!</p>
+<h1 mat-dialog-title>
+    Register</h1>
+<form [formGroup]="registerForm" (ngSubmit)='onRegisterSubmit()' class="example-form">
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+
+            <input required formControlName="firstName" name='firstName' type="text" matInput placeholder="Placeholder">
+            <mat-error *ngIf="registerForm.get('firstName').hasError('required')">
+                First name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+
+            <input required formControlName="lastName" name="lastName" type="text" [errorStateMatcher]="matcher" matInput placeholder="Placeholder">
+            <mat-error *ngIf="registerForm.get('lastName').hasError('required') && registerForm.get('lastName').touched">
+                Last name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+
+            <input required formControlName="email" name="email" type="email" [errorStateMatcher]="matcher" matInput placeholder="Placeholder">
+            <!-- <mat-error>
+                <span *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">Please enter an Email</span>
+            </mat-error> -->
+            <mat-error *ngIf="registerForm.get('email').hasError('email') && !registerForm.get('email').hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('email').hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+
+            <input required formControlName="password" name="password" type="password" [errorStateMatcher]="matcher" matInput placeholder="Placeholder">
+            <mat-error *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').touched">
+                Password must be minium <strong>6 characters</strong>
+            </mat-error>
+
+            <mat-error *ngIf="registerForm.get('password').hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>
+
+
+        </mat-form-field>
+    </p>
+
+
+
+    <button [disabled]="!registerForm.valid" mat-raised-button color="primary" type="submit">Submit</button>
+</form>

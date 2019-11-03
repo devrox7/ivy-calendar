@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainDashComponent } from 'src/layout/main-dash/main-dash.component';
 import { AuthenticationModule } from 'src/modules/authentication/authentication.module';
 import { DashboardModule } from 'src/modules/dashboard/dashboard.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DashboardModule } from 'src/modules/dashboard/dashboard.module';
     DashboardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
