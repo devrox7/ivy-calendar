@@ -20,8 +20,8 @@
 }
 
 .logo {
-    width: 43px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin: 10px;
 }
 
@@ -30,19 +30,19 @@
 }
 
 .mat-toolbar-single-row {
-    height: 20%;
+    height: 17%;
 }
 
 .mat-drawer-side {
     border-right: 0px;
-    box-shadow: 0px 0px 30px 0px rgba(55, 87, 201, 0.3);
+    box-shadow: 0px 0px 13px 0px rgba(55, 87, 201, 0.3);
 }
 
 .logo-text {
     color: white;
-    text-shadow: 1px 1px 2px #55368a, 0 0 15px #7f70d4, 0 0 5px #5858bc;
+    text-shadow: 1px 1px 2px #363a8a, 0 0 15px #70c2d4, 0 0 5px #5858bc;
     font-family: 'Wallpoet', cursive;
-    font-size: 40px;
+    font-size: 43px;
     padding: 15px 0px 10px 10px;
 }
 
@@ -55,10 +55,14 @@
 }
 
 .active-link {
-    /* font-size: 15px; */
-    background-color: rgba(17, 43, 42, 0.26);
+    background-color: rgba(61, 94, 211, 0.28) !important;
     transition-duration: 0.1s;
     border-left: 1.5px solid;
+    box-shadow: 10px 0px 15px 0px rgba(55, 87, 201, 0.3);
+}
+
+.mat-nav-list .mat-list-item:hover {
+    background: rgba(61, 94, 211, 0.18) !important;
 }
 
 .mat-flat-button {
@@ -67,4 +71,8 @@
     box-shadow: 0px 0px 10px 0px rgba(52, 59, 156, 0.9);
     padding: 2px 30px;
     color: white;
+}
+
+.mat-spacer {
+    flex: 1 1 auto;
 }

@@ -1,0 +1,8 @@
+.empty-view {
+    -webkit-animation: emptyViewEnters 750ms cubic-bezier(.165, .84, .44, 1);
+    animation: emptyViewEnters 750ms cubic-bezier(.165, .84, .44, 1);
+    text-align: center;
+    border: 1px solid #d7dbdb;
+    border-radius: 3px;
+    padding: 50px calc(50% - 400px) 50px;
+}
