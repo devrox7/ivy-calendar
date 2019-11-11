@@ -10,7 +10,13 @@
     bottom: 5%;
     z-index: 2000;
     width: 92%;
-    margin-top: -10%;
+    margin-top: -6%;
+}
+
+@media screen and (min-width: 1400px){
+    .dashboard-card {
+        margin-top: -11% !important;
+    }
 }
 
 .mat-card {
