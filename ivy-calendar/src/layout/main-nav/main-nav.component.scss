@@ -29,11 +29,11 @@
     display: contents;
 }
 
-// @media screen and (max-width: 1449px) {
-//     .mat-toolbar-single-row {
-//         height: 26% !important;
-//     }
-// }
+@media only screen and (max-width: 2000px) {
+    .mat-toolbar-single-row {
+        height: 26% !important;
+    }
+}
 .mat-toolbar-single-row {
     height: 17%;
 }
