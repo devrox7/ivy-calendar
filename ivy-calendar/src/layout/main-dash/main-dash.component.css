@@ -1,0 +1,50 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  top: 6%;
+  bottom: 5%;
+  z-index: 2000;
+  width: 92%;
+  margin-top: -6%;
+}
+
+@media screen and (min-width: 1448px) and (max-width: 350) {
+  .dashboard-card {
+    margin-top: -13% !important;
+  }
+}
+
+@media screen and (max-width: 1449px) and (min-width: 1800) {
+  .dashboard-card {
+    margin-top: -9% !important;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .dashboard-card {
+    margin-top: -11% !important;
+  }
+}
+
+.mat-card {
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(55, 87, 201, 0.3);
+          box-shadow: 0px 7px 20px 0px rgba(55, 87, 201, 0.3);
+  border-radius: 10px;
+  background: white;
+  color: #233595;
+  overflow: hidden;
+  padding-bottom: 5%;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+/*# sourceMappingURL=main-dash.component.css.map */

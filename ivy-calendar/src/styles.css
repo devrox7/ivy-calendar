@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic|Nunito|Nunito+Sans|Poppins|Questrial|Quicksand|Raleway|Source+Code+Pro|Titillium+Web|Varela+Round&display=swap");
+/* angular-cli file: src/styles.css */
+@import url(c:\Users\ionro\Documents\GitHub\ivy-calendar\ivy-calendar\node_modules\angular-calendar\css\angular-calendar.css);
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.primary {
+  background-color: #3D5ED3 !important;
+}
+
+@-webkit-keyframes emptyViewEnters {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes emptyViewEnters {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.empty-view {
+  -webkit-animation: emptyViewEnters 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: emptyViewEnters 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: center;
+  border: 1px solid #d7dbdb;
+  border-radius: 3px;
+  border: 0px;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content,
+.mat-list-base .mat-list-option .mat-list-item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  height: inherit;
+  font-size: 16px;
+  color: #0e2b91;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.cal-month-view .cal-day-cell {
+  min-height: 100px;
+  border-right-color: #92a9db38 !important;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(55, 87, 201, 0.11);
+          box-shadow: 0px 0px 7px 0px rgba(55, 87, 201, 0.11);
+  height: 150px;
+}
+
+.cal-month-view .cal-cell-row .cal-cell:hover,
+.cal-month-view .cal-cell.cal-has-events.cal-open {
+  background-color: #416ad614;
+}
+
+.cal-month-view .cal-header .cal-cell {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cal-month-view .cal-day-cell.cal-today {
+  background-color: rgba(68, 94, 181, 0.2);
+}
+
+.cal-month-view .cal-open-day-events {
+  color: #2646a5;
+  background-color: rgba(60, 97, 211, 0.14);
+  -webkit-box-shadow: inset 0 0 15px 0 rgba(47, 60, 168, 0.12);
+          box-shadow: inset 0 0 15px 0 rgba(47, 60, 168, 0.12);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.cal-month-view .cal-day-badge {
+  background-color: #486cb9;
+  color: #fff;
+}
+
+.cal-week-view .cal-day-headers .cal-header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cal-day-view .cal-event {
+  color: #2a4dd7 !important;
+  background-color: #e3e8fa !important;
+  border-color: transparent !important;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(55, 87, 201, 0.3) !important;
+          box-shadow: 0px 0px 10px 0px rgba(55, 87, 201, 0.3) !important;
+}
+
+.cal-week-view .cal-event {
+  color: #2a4dd7 !important;
+  background-color: #e3e8fa !important;
+  border-color: transparent !important;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(55, 87, 201, 0.3) !important;
+          box-shadow: 0px 0px 10px 0px rgba(55, 87, 201, 0.3) !important;
+}
+
+.cal-week-view .cal-header.cal-today {
+  background-color: rgba(65, 174, 214, 0.31);
+}
+
+.cal-week-view .cal-time {
+  font-family: 'Varela Round', sans-serif;
+}
+
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+/*# sourceMappingURL=styles.css.map */
