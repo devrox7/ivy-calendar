@@ -6,9 +6,12 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 
-  { path: 'dashboard', loadChildren: () => import('../modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
+  { path: 'authentication', loadChildren: () => import('../modules/authentication/authentication.module').then(m => m.AuthenticationModule)},
 
-  { path: 'authentication', loadChildren: () => import('../modules/authentication/authentication.module').then(m => m.AuthenticationModule)}
+  { path: 'dashboard', loadChildren: () => import('../modules/dashboard/dashboard.module').then(m => m.DashboardModule)}
+
+  
+
 
 ];
 
