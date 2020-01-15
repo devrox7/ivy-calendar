@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
 
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-sidenav *ngIf="currentUser" #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar style="display: block">
             <div style="display: flex; padding-top: 10px; padding-bottom:15%;" class="main-logo">
                 <img class='logo' src="../../assets/images/callogo-gradient.png">
@@ -38,7 +38,7 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary">
+        <mat-toolbar *ngIf="currentUser" color="primary">
 
             <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async"> -->
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
@@ -46,6 +46,7 @@
       </button>
 
             <span class="mat-spacer"></span>
+            <a class="nav-item nav-link" (click)="logout()">Logout</a>
 
             <button routerLink="/home" style='padding-right: 10px;' type="button" mat-icon-button>
         <mat-icon style="font-size: 40px; ">account_circle</mat-icon>
