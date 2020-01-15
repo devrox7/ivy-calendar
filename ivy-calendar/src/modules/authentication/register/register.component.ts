@@ -20,22 +20,23 @@ export class RegisterComponent implements OnInit {
 
   account = new Account;
 
+  registerForm: FormGroup;
 
 
 
-  registerForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required,Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
-  });
+  
 
   matcher = new MyErrorStateMatcher();
 
   constructor() { }
 
   ngOnInit() {
-    
+    this.registerForm = new FormGroup({
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required,Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
   }
 
   onRegisterSubmit(){
