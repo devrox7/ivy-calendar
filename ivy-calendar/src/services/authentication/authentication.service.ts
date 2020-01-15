@@ -22,7 +22,7 @@ export class AuthenticationService {
     }
 
     login(email: string, password: string) {
-        return this.http.post<any>(`${environment.apiUrl}/user/login`, { email, password })
+        return this.http.post<any>(environment.apiUrl+'/user/login', { email, password })
             .pipe(map(user => {
                 // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
                 user.authdata = window.btoa(email + ':' + password);
@@ -32,8 +32,8 @@ export class AuthenticationService {
             }));
     }
 
-    register(user: User){
-        return this.http.post<any>(`${environment.apiUrl}/user/register`, {user})
+    register(user){
+        return this.http.post<any>(environment.apiUrl+'/user/register', {user})
         .pipe(map(user => {
             // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
             user.authdata = window.btoa(user);

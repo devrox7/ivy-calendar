@@ -1,5 +1,10 @@
+<div class="main-logo">
+    <img class='logo' src="../../assets/images/callogo-gradient.png">
+    <span class="logo-text" style="    display: flex;
+    justify-content: center;">IVY</span>
+</div>
 <h1 mat-dialog-title>
-    Register</h1>
+    Register account</h1>
 <form [formGroup]="registerForm" (ngSubmit)='onRegisterSubmit()' class="example-form">
     <p>
         <mat-form-field appearance="fill">
@@ -59,3 +64,5 @@
 
     <button [disabled]="!registerForm.valid" mat-raised-button color="primary" type="submit">Submit</button>
 </form>
+
+<div style="margin:30px;cursor:pointer" routerLink="/login"><p>Login here!</p></div>

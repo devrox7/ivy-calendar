@@ -19,4 +19,8 @@
 .card {
   border: none !important;
 }
+
+.mat-raised-button.mat-primary {
+  background-color: #3965d1 !important;
+}
 /*# sourceMappingURL=login.component.css.map */

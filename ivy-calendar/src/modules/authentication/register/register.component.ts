@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/models/account.model';
 import { FormControl, FormGroupDirective, NgForm, FormGroup, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { AuthenticationService } from 'src/services/authentication/authentication.service';
+import { first } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/models/user.model';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -18,7 +22,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class RegisterComponent implements OnInit {
 
-  account = new Account;
+  user = new User;
+  loading = false;
+    submitted = false;
+    returnUrl: string;
+    error = '';
 
   registerForm: FormGroup;
 
@@ -28,7 +36,8 @@ export class RegisterComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService,private route: ActivatedRoute,
+    private router: Router,) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
@@ -39,14 +48,38 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  get form() { return this.registerForm.controls; }
+
+
   onRegisterSubmit(){
+debugger;
+    this.submitted = true;
+
+       // stop here if form is invalid
+       if (this.registerForm.invalid) {
+           return;
+       }
+
     const user = {
-      firstName: this.account.firstName,
-      lastName: this.account.lastName,
-      email: this.account.email,
-      password: this.account.password
+      firstName: this.form.firstName.value,
+      lastName: this.form.lastName.value,
+      email: this.form.email.value,
+      password: this.form.password.value
     }
 
+    this.authenticationService.register(user)
+    .pipe(first())
+           .subscribe(
+               data => {
+                   this.router.navigate(['/authentication/login']);
+               },
+               error => {
+                   this.error = error;
+                   this.loading = false;
+               });
+
   }
+
+  
 
 }

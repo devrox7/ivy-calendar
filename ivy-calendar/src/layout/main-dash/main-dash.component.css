@@ -11,24 +11,6 @@
   margin-top: auto;
 }
 
-@media screen and (min-width: 1448px) and (max-width: 350) {
-  .dashboard-card {
-    margin-top: -13% !important;
-  }
-}
-
-@media screen and (max-width: 1449px) and (min-width: 1800) {
-  .dashboard-card {
-    margin-top: -9% !important;
-  }
-}
-
-@media screen and (max-width: 1800px) {
-  .dashboard-card {
-    margin-top: -11% !important;
-  }
-}
-
 .mat-card {
   -webkit-box-shadow: 0px 3px 15px 0px rgba(55, 87, 201, 0.2);
           box-shadow: 0px 3px 15px 0px rgba(55, 87, 201, 0.2);

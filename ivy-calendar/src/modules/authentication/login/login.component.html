@@ -6,11 +6,14 @@
 
         <div class="main-logo">
             <img class='logo' src="../../assets/images/callogo-gradient.png">
-            <span class="logo-text">IVY</span>
+            <span class="logo-text" style="    display: flex;
+            justify-content: center;">IVY</span>
         </div>
+        <h1 mat-dialog-title>
+            Log in!</h1>
 
         <div class="card-body">
-            <form [formGroup]="loginForm" >
+            <form [formGroup]="loginForm">
 
                 <p>
                     <mat-form-field appearance="fill">
@@ -26,7 +29,7 @@
                     <mat-form-field appearance="fill">
                         <mat-label>Password</mat-label>
 
-                        <input [(ngModel)]="password" required formControlName="password" name="password" type="password"  matInput placeholder="Password">
+                        <input [(ngModel)]="password" required formControlName="password" name="password" type="password" matInput placeholder="Password">
                         <!-- <mat-error *ngIf="loginForm.get('password').hasError('minlength') && registerForm.get('password').touched">
                             Password must be minium <strong>6 characters</strong>
                         </mat-error>
@@ -43,8 +46,14 @@
                                 Login
                             </button>
 
+
                 <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+
             </form>
+            <div style="margin:30px;cursor:pointer" routerLink="/register">
+                <p>New? Create account here.</p>
+            </div>
+
         </div>
     </div>
 </div>

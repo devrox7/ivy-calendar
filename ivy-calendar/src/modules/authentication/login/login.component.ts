@@ -40,10 +40,6 @@ export class LoginComponent implements OnInit {
 
  
 
-  // get return url from route parameters or default to '/'
-  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';        
-
-
   }
   
 
@@ -66,7 +62,7 @@ export class LoginComponent implements OnInit {
              .pipe(first())
              .subscribe(
                  data => {
-                     this.router.navigate(['/home']);
+                     this.router.navigate(['/dashboard']);
                  },
                  error => {
                      this.error = error;
