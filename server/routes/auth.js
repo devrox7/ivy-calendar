@@ -59,8 +59,9 @@ router.post('/register', async(req, res) => {
 router.post('/login', async(req, res) => {
 
     console.log(req.body);
+    console.log("Login");
     
-res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "*");
     //Validate user
     console.log('1');
 
@@ -80,9 +81,9 @@ res.header("Access-Control-Allow-Origin", "*");
 
     //Create and assign token
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-    res.header('auth-token', token).send(token);
+    res.header('auth-token', token).status(200).send({ user: user._id });
 
-    // res.send('Logged in');
+    //return res.status(200).send('Logged in');
 });
 
 module.exports = router;
