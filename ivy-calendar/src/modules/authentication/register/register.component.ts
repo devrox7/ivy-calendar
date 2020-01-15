@@ -52,14 +52,14 @@ export class RegisterComponent implements OnInit {
 
 
   onRegisterSubmit(){
-debugger;
+    debugger;
+
     this.submitted = true;
 
        // stop here if form is invalid
        if (this.registerForm.invalid) {
            return;
        }
-
     const user = {
       firstName: this.form.firstName.value,
       lastName: this.form.lastName.value,

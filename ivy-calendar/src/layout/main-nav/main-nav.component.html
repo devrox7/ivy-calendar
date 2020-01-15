@@ -2,7 +2,7 @@
 
     <mat-sidenav *ngIf="currentUser" #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar style="display: block">
-            <div style="display: flex; padding-top: 10px; padding-bottom:15%;" class="main-logo">
+            <div style="display: flex; padding-top: 10px;" class="main-logo">
                 <img class='logo' src="../../assets/images/callogo-gradient.png">
                 <span class="logo-text">IVY</span>
             </div>
@@ -34,6 +34,9 @@
             <a mat-list-item href="#">
                 <i class="fas fa-th-list"></i> &nbsp; Tasks
             </a>
+            <a  (click)="logout()"   mat-list-item >
+                <i style="color:#c72424" class="fas fa-sign-out-alt"></i> &nbsp; <div style="color:#c72424">Logout</div>
+            </a>
 
         </mat-nav-list>
     </mat-sidenav>
@@ -46,7 +49,7 @@
       </button>
 
             <span class="mat-spacer"></span>
-            <a class="nav-item nav-link" (click)="logout()">Logout</a>
+            
 
             <button routerLink="/home" style='padding-right: 10px;' type="button" mat-icon-button>
         <mat-icon style="font-size: 40px; ">account_circle</mat-icon>

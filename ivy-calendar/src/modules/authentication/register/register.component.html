@@ -64,5 +64,7 @@
 
     <button [disabled]="!registerForm.valid" mat-raised-button color="primary" type="submit">Submit</button>
 </form>
+<div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+
 
 <div style="margin:30px;cursor:pointer" routerLink="/login"><p>Login here!</p></div>

@@ -48,8 +48,7 @@ export class LoginComponent implements OnInit {
      get form() { return this.loginForm.controls; }
 
      onSubmit() {
-      debugger;
-
+      
          this.submitted = true;
  
          // stop here if form is invalid
@@ -62,9 +61,11 @@ export class LoginComponent implements OnInit {
              .pipe(first())
              .subscribe(
                  data => {
+                      
                      this.router.navigate(['/dashboard']);
                  },
                  error => {
+                     
                      this.error = error;
                      this.loading = false;
                  });
